@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <span id="themeIcon">🌙</span>
+</button>
+
+<div class="container">
+    <header class="header">
+        <h1 class="title">Age Calculator</h1>
+        <p class="subtitle">Discover your age </p>
+    </header>
+
+    <main class="card">
+        <section class="input-section">
+            <label for="birthDate" class="input-label">Select Your Date of Birth</label>
+            <input
+                    type="date"
+                    id="birthDate"
+                    class="date-input"
+                    max=""
+                    aria-describedby="date-help"
+            >
+            <div id="date-help" class="sr-only">Select your birthdate to calculate your age</div>
+        </section>
+
+        <section id="resultsSection" class="hidden">
+            <div class="results-grid">
+                <div class="result-item" id="yearsResult">
+                    <span class="result-value" id="years">0</span>
+                    <span class="result-label">Years</span>
+                </div>
+                <div class="result-item" id="monthsResult">
+                    <span class="result-value" id="months">0</span>
+                    <span class="result-label">Months</span>
+                </div>
+                <div class="result-item" id="daysResult">
+                    <span class="result-value" id="days">0</span>
+                    <span class="result-label">Days</span>
+                </div>
+            </div>
+            <div class="countdown-section">
+                <h3 class="countdown-title">Next Birthday Countdown</h3>
+                <div class="countdown-timer" id="countdownTimer">
+                    <span class="loading"></span>
+                </div>
+                <p class="countdown-label" id="countdownLabel">Calculating...</p>
+            </div>
+
+
+            <div class="info-section">
+                <div class="info-card">
+                    <span class="info-icon" id="dayIcon">📅</span>
+                    <h4 class="info-title">Born On</h4>
+                    <p class="info-content" id="birthDay">-</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon" id="ageGroupIcon">👶</span>
+                    <h4 class="info-title">Life Stage</h4>
+                    <p class="info-content" id="ageGroup">-</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+<script src="f1.js"></script>
+</body>
+</html>
